@@ -1,0 +1,4 @@
+for upload to s3 bucket
+aaa
+bbb
+ccc

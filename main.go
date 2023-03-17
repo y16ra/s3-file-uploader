@@ -4,7 +4,7 @@ import (
 	"context"
 	"flag"
 	"fmt"
-	"io/ioutil"
+	"io"
 	"net/http"
 	"os"
 	"time"
@@ -117,7 +117,7 @@ func uploadFileWithHTTP(objectKey string, signedURL string) error {
 	defer res.Body.Close()
 
 	// レスポンスを読み込む
-	body, err := ioutil.ReadAll(res.Body)
+	body, err := io.ReadAll(res.Body)
 	if err != nil {
 		return err
 	}
